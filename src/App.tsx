@@ -9,10 +9,12 @@ import SolutionsPage from "@/pages/SolutionsPage";
 import ProductDetailPage from "@/pages/ProductDetailPage";
 import ROICalculatorPage from "@/pages/ROICalculatorPage";
 import NotFoundPage from "@/pages/NotFoundPage";
+import { ScrollToTop } from "./components/site/ScrollToTop";
 
 export default function App() {
   return (
     <QuoteProvider>
+      <ScrollToTop />
       <Routes>
         <Route path="/" element={<HomePage />} />
         <Route path="/about" element={<AboutPage />} />
