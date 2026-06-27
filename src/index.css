@@ -1,0 +1,148 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --radius: 0.625rem;
+    --navy: oklch(0.30 0.07 254);
+    --navy-deep: oklch(0.22 0.06 254);
+    --green: oklch(0.74 0.17 138);
+    --green-deep: oklch(0.62 0.16 138);
+    --cyan: oklch(0.89 0.05 210);
+    --cyan-soft: oklch(0.96 0.02 210);
+    --ink: oklch(0.20 0.02 254);
+    --paper: oklch(0.985 0.005 240);
+    --background: oklch(1 0 0);
+    --foreground: oklch(0.30 0.07 254);
+    --card: oklch(1 0 0);
+    --card-foreground: oklch(0.30 0.07 254);
+    --popover: oklch(1 0 0);
+    --popover-foreground: oklch(0.30 0.07 254);
+    --primary: oklch(0.30 0.07 254);
+    --primary-foreground: oklch(0.985 0 0);
+    --secondary: oklch(0.96 0.02 210);
+    --secondary-foreground: oklch(0.30 0.07 254);
+    --muted: oklch(0.965 0.01 230);
+    --muted-foreground: oklch(0.48 0.03 254);
+    --accent: oklch(0.74 0.17 138);
+    --accent-foreground: oklch(0.18 0.04 254);
+    --destructive: oklch(0.55 0.22 27);
+    --destructive-foreground: oklch(0.985 0 0);
+    --border: oklch(0.91 0.015 230);
+    --input: oklch(0.91 0.015 230);
+    --ring: oklch(0.30 0.07 254);
+  }
+
+  * {
+    border-color: var(--border);
+  }
+
+  body {
+    background-color: var(--background);
+    color: var(--foreground);
+    font-family: "Inter", ui-sans-serif, system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  h1, h2, h3, h4, h5 {
+    font-family: "Sora", ui-sans-serif, system-ui, sans-serif;
+    letter-spacing: -0.02em;
+    color: oklch(0.30 0.07 254);
+  }
+}
+
+@layer components {
+  .container-page {
+    width: 100%;
+    max-width: 1240px;
+    margin-inline: auto;
+    padding-inline: 1.25rem;
+  }
+  @media (min-width: 768px) {
+    .container-page {
+      padding-inline: 2rem;
+    }
+  }
+
+  .eyebrow {
+    font-family: "Sora", ui-sans-serif, system-ui, sans-serif;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.18em;
+    text-transform: uppercase;
+    color: oklch(0.62 0.16 138);
+  }
+
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: oklch(0.30 0.07 254);
+    color: white;
+    padding: 0.85rem 1.4rem;
+    border-radius: 10px;
+    font-weight: 600;
+    font-family: "Sora", ui-sans-serif, system-ui, sans-serif;
+    transition: background 0.2s ease, transform 0.2s ease;
+  }
+  .btn-primary:hover {
+    background: oklch(0.22 0.06 254);
+  }
+
+  .btn-accent {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    background: oklch(0.74 0.17 138);
+    color: oklch(0.22 0.06 254);
+    padding: 0.95rem 1.6rem;
+    border-radius: 10px;
+    font-weight: 700;
+    font-family: "Sora", ui-sans-serif, system-ui, sans-serif;
+    transition: background 0.2s ease;
+  }
+  .btn-accent:hover {
+    background: oklch(0.62 0.16 138);
+    color: white;
+  }
+
+  .btn-outline {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    border: 1px solid oklch(0.91 0.015 230);
+    color: oklch(0.30 0.07 254);
+    padding: 0.8rem 1.2rem;
+    border-radius: 10px;
+    font-weight: 600;
+    font-family: "Sora", ui-sans-serif, system-ui, sans-serif;
+    background: white;
+  }
+  .btn-outline:hover {
+    border-color: oklch(0.30 0.07 254);
+  }
+
+  .card-surface {
+    background: white;
+    border: 1px solid oklch(0.91 0.015 230);
+    border-radius: 12px;
+  }
+
+  .section {
+    padding-block: 5rem;
+  }
+  @media (min-width: 768px) {
+    .section {
+      padding-block: 7rem;
+    }
+  }
+
+  .rule-accent {
+    height: 3px;
+    width: 44px;
+    background: oklch(0.74 0.17 138);
+    display: inline-block;
+    border-radius: 2px;
+  }
+}
